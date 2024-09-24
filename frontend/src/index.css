@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+a.active hr {
+  display: block;
+}
+
+a.active {
+  font-weight: 700;
+}
+
+* {
+  font-family: "SUSE", sans-serif;
+}
