@@ -19,52 +19,52 @@ function PlaceOrder() {
           <input
             type="text"
             placeholder="First Name"
-            className="py-1.5 px-3.5 border border-gray-300 rounded w-full"
+            className="py-1.5 px-3.5 border border-gray-300 rounded w-full outline-none"
           />
           <input
             type="text"
             placeholder="Last Name"
-            className="py-1.5 px-3.5 border border-gray-300 rounded w-full"
+            className="py-1.5 px-3.5 border border-gray-300 rounded w-full outline-none"
           />
         </div>
         <input
           type="text"
           placeholder="Email Address"
-          className="py-1.5 px-3.5 border border-gray-300 rounded w-full"
+          className="py-1.5 px-3.5 border border-gray-300 rounded w-full outline-none"
         />
         <input
           type="text"
           placeholder="Street"
-          className="py-1.5 px-3.5 border border-gray-300 rounded w-full"
+          className="py-1.5 px-3.5 border border-gray-300 rounded w-full outline-none"
         />
         <div className="flex gap-3">
           <input
             type="text"
             placeholder="City"
-            className="py-1.5 px-3.5 border border-gray-300 rounded w-full"
+            className="py-1.5 px-3.5 border border-gray-300 rounded w-full outline-none"
           />
           <input
             type="text"
             placeholder="State"
-            className="py-1.5 px-3.5 border border-gray-300 rounded w-full"
+            className="py-1.5 px-3.5 border border-gray-300 rounded w-full outline-none"
           />
         </div>
         <div className="flex gap-3">
           <input
             type="number"
             placeholder="Zip Code"
-            className="py-1.5 px-3.5 border border-gray-300 rounded w-full"
+            className="py-1.5 px-3.5 border border-gray-300 rounded w-full outline-none"
           />
           <input
             type="text"
             placeholder="Country"
-            className="py-1.5 px-3.5 border border-gray-300 rounded w-full"
+            className="py-1.5 px-3.5 border border-gray-300 rounded w-full outline-none"
           />
         </div>
         <input
           type="number"
           placeholder="Phone"
-          className="py-1.5 px-3.5 border border-gray-300 rounded w-full"
+          className="py-1.5 px-3.5 border border-gray-300 rounded w-full outline-none"
         />
       </div>
       {/* Right Side */}
