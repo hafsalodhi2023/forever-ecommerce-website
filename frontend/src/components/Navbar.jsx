@@ -24,7 +24,7 @@ const Navbar = () => {
       <Link to="/">
         <img src={assets.logo} className="w-36" alt="" />
       </Link>
-      <ul className="hidden gap-5 text-sm text-gray-700 sm:flex">
+      <ul className="hidden gap-5 text-gray-700 sm:flex">
         <NavLink to="/" className="flex flex-col items-center gap-1">
           <p>HOME</p>
           <hr className="w-2/4 border-none h-[2px] bg-gray-700 hidden" />
@@ -53,14 +53,14 @@ const Navbar = () => {
               setShowSearch(true);
             }
           }}
-          className="w-5 cursor-pointer"
+          className="w-6 cursor-pointer"
           alt=""
         />
         <div className="relative group">
           <Link to={"/login"}>
             <img
               src={assets.profile_icon}
-              className="w-5 cursor-pointer"
+              className="w-6 cursor-pointer"
               alt=""
             />
           </Link>
@@ -74,7 +74,7 @@ const Navbar = () => {
           </div>
         </div>
         <Link to="/cart" className="relative">
-          <img src={assets.cart_icon} className="w-5 min-w-5" alt="" />
+          <img src={assets.cart_icon} className="w-6 min-w-5" alt="" />
           <p className="absolute right-[-7px] bottom-[-7px] w-4 text-center leading-4 bg-black text-white aspect-square rounded-full text-[8px]">
             {getCartCount()}
           </p>
@@ -84,7 +84,7 @@ const Navbar = () => {
             setVisible(true);
           }}
           src={assets.menu_icon}
-          className="w-5 cursor-pointer sm:hidden"
+          className="w-6 cursor-pointer sm:hidden"
           alt=""
         />
       </div>

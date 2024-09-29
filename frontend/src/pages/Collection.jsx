@@ -1,4 +1,4 @@
-import  { useContext, useState, useEffect } from "react";
+import { useContext, useState, useEffect } from "react";
 import { ShopContext } from "../context/ShopContext";
 import { assets } from "../assets/assets";
 import Title from "../components/Title";
@@ -85,7 +85,7 @@ function Collection() {
 
       <div className="min-w-60">
         <p
-          className="flex items-center gap-2 my-2 text-xl font-semibold cursor-pointer"
+          className="flex items-center gap-2 my-2 text-2xl font-semibold cursor-pointer"
           onClick={() => {
             setShowFilter(!showFilter);
           }}
@@ -103,12 +103,12 @@ function Collection() {
             showFilter ? "" : "hidden"
           } md:block`}
         >
-          <p className="mb-3 text-sm font-medium">CATEGORIES</p>
-          <div className="flex flex-col gap-2 text-sm font-light text-gray-700">
+          <p className="mb-3 text-lg font-medium">CATEGORIES</p>
+          <div className="flex flex-col gap-2 font-light text-gray-700">
             <p className="flex gap-2">
               <input
                 type="checkbox"
-                className="w-3 accent-[#272727]"
+                className="w-4 accent-[#272727]"
                 value={"Men"}
                 onChange={toggleCategory}
               />{" "}
@@ -117,7 +117,7 @@ function Collection() {
             <p className="flex gap-2">
               <input
                 type="checkbox"
-                className="w-3 accent-[#272727]"
+                className="w-4 accent-[#272727]"
                 value={"Women"}
                 onChange={toggleCategory}
               />{" "}
@@ -126,7 +126,7 @@ function Collection() {
             <p className="flex gap-2">
               <input
                 type="checkbox"
-                className="w-3 accent-[#272727]"
+                className="w-4 accent-[#272727]"
                 value={"Kids"}
                 onChange={toggleCategory}
               />{" "}
@@ -140,12 +140,12 @@ function Collection() {
             showFilter ? "" : "hidden"
           } md:block`}
         >
-          <p className="mb-3 text-sm font-medium">TYPE</p>
-          <div className="flex flex-col gap-2 text-sm font-light text-gray-700">
+          <p className="mb-3 text-lg font-medium">TYPE</p>
+          <div className="flex flex-col gap-2 font-light text-gray-700">
             <p className="flex gap-2">
               <input
                 type="checkbox"
-                className="w-3 accent-[#272727]"
+                className="w-4 accent-[#272727]"
                 value={"Topwear"}
                 onChange={toggleSubCategory}
               />{" "}
@@ -154,7 +154,7 @@ function Collection() {
             <p className="flex gap-2">
               <input
                 type="checkbox"
-                className="w-3 accent-[#272727]"
+                className="w-4 accent-[#272727]"
                 value={"Bottomwear"}
                 onChange={toggleSubCategory}
               />{" "}
@@ -163,7 +163,7 @@ function Collection() {
             <p className="flex gap-2">
               <input
                 type="checkbox"
-                className="w-3 accent-[#272727]"
+                className="w-4 accent-[#272727]"
                 value={"Winterwear"}
                 onChange={toggleSubCategory}
               />{" "}
@@ -180,7 +180,7 @@ function Collection() {
           <select
             name=""
             id=""
-            className="px-2 text-sm border-2 border-gray-300"
+            className="px-2 text-base border-2 border-gray-300"
             onChange={(e) => setSortType(e.target.value)}
           >
             <option value="relevant">Sort By: Relevant</option>

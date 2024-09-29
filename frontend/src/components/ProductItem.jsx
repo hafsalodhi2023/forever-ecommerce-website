@@ -1,4 +1,4 @@
-import  { useContext } from "react";
+import { useContext } from "react";
 import { ShopContext } from "../context/ShopContext";
 import { Link } from "react-router-dom";
 
@@ -19,10 +19,10 @@ const ProductItem = ({ id, image, name, price }) => {
           alt=""
         />
       </div>
-      <p className="pt-3 pb-1 overflow-hidden text-sm whitespace-nowrap text-ellipsis">
+      <p className="pt-3 pb-1 overflow-hidden text-lg whitespace-nowrap text-ellipsis">
         {name}
       </p>
-      <p className="text-base font-medium">
+      <p className="text-xl font-medium">
         {currency}
         {price}
       </p>

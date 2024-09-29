@@ -3,7 +3,7 @@ import { assets } from "../assets/assets";
 const Footer = () => {
   return (
     <div>
-      <div className="flex flex-col sm:grid grid-cols-[3fr_1fr_1fr] gap-14 my-10 mt-40 text-sm">
+      <div className="flex flex-col sm:grid grid-cols-[3fr_1fr_1fr] gap-14 my-10 mt-40 text-base">
         <div>
           <img src={assets.logo} className="w-32 mb-5 " alt="" />
           <p className="w-full text-gray-600 md:w-2/3">
@@ -32,7 +32,7 @@ const Footer = () => {
       </div>
       <div>
         <hr />
-        <p className="py-5 text-sm text-center">
+        <p className="py-5 text-base text-center">
           Copyright © 2024 @forever.com - All Rights Reserved
         </p>
       </div>
