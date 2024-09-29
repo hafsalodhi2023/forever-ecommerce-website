@@ -1,5 +1,6 @@
 import Title from "../components/Title";
 import { assets } from "../assets/assets";
+import NewsletterBox from "../components/NewsletterBox";
 
 function About() {
   return (
@@ -38,6 +39,33 @@ function About() {
           </p>
         </div>
       </div>
+      <div className="py-4 text-3xl">
+        <Title text1={"WHY"} text2={"CHOOSE US"} />
+      </div>
+      <div className="flex flex-col mb-20 text-lg md:flex-row">
+        <div className="flex flex-col gap-5 px-10 py-8 border md:px-16 sm:py-20">
+          <b>Quality Assurance:</b>
+          <p className="text-base text-gray-600">
+            We meticulously select and vet each product to ensure it meets our
+            stringent quality standards.
+          </p>
+        </div>
+        <div className="flex flex-col gap-5 px-10 py-8 border md:px-16 sm:py-20">
+          <b>Convenience:</b>
+          <p className="text-base text-gray-600">
+            With our user-friendly interface and hassle-free ordering process,
+            shopping has never been easier.
+          </p>
+        </div>
+        <div className="flex flex-col gap-5 px-10 py-8 border md:px-16 sm:py-20">
+          <b>Exceptional Customer Service:</b>
+          <p className="text-base text-gray-600">
+            Our team of dedicated professionals is here to assist you the way,
+            ensuring your satisfaction is our top priority.
+          </p>
+        </div>
+      </div>
+      <NewsletterBox />
     </div>
   );
 }
