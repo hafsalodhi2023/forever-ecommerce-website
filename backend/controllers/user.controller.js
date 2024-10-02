@@ -56,7 +56,10 @@ const signUpUser = async (req, res) => {
     });
   } catch (error) {
     debugging(error);
-    return res.status(500).json({ success: false, message: error.message });
+    return res.status(500).json({
+      success: false,
+      message: error.message,
+    });
   }
 };
 
