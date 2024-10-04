@@ -4,11 +4,42 @@ import bcrypt from "bcrypt";
 import createToken from "../utils/createToken.util.js";
 import debug from "debug";
 
-// creating debugger
+// Creating debugger
 const debugging = debug("development:controller:user");
 
 // Route for user signIn
-const signInUser = async (req, res) => {};
+const signInUser = async (req, res) => {
+  try {
+    const { email, password } = req.body;
+
+    const user = await userModel.findOne({ email });
+
+    if (!user) {
+      return res
+        .status(400)
+        .json({ success: false, message: "Please sign up first." });
+    }
+
+    const isMatch = await bcrypt.compare(password, user.password);
+
+    if (isMatch) {
+      const token = createToken(user._id);
+      return res
+        .status(200)
+        .json({ success: true, message: "Logged in successfully.", token });
+    } else {
+      return res
+        .status(400)
+        .json({ success: false, message: "Invalid credentials." });
+    }
+  } catch (error) {
+    debugging(error);
+    return res.status(500).json({
+      success: false,
+      message: error.message,
+    });
+  }
+};
 
 // Route for user signUp
 const signUpUser = async (req, res) => {
