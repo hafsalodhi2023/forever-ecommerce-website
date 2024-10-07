@@ -58,7 +58,7 @@ const addProduct = async (req, res) => {
 
     debugging(productData);
 
-    res.json({});
+    res.json({ success: true, message: "Product added successfully." });
   } catch (error) {
     debugging(error);
     return res.status(500).json({ success: false, message: error.message });
@@ -77,7 +77,15 @@ const listProducts = async (req, res) => {
 };
 
 // Function for removing products
-const removeProduct = async (req, res) => {};
+const removeProduct = async (req, res) => {
+  try {
+    await productModel.deleteOne({ _id: req.body.id });
+    res.status(200).json({ success: true, message: "Product removed." });
+  } catch (error) {
+    debugging(error);
+    return res.status(500).json({ success: false, message: error.message });
+  }
+};
 
 // Function for single product info
 const singleProduct = async (req, res) => {};
