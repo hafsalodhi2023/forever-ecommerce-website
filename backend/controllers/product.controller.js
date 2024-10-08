@@ -68,7 +68,7 @@ const addProduct = async (req, res) => {
 // Function for list products
 const listProducts = async (req, res) => {
   try {
-    let products = await productModel.find();
+    let products = await productModel.find({});
     return res.status(200).json({ success: true, data: products });
   } catch (error) {
     debugging(error);
