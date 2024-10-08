@@ -88,6 +88,15 @@ const removeProduct = async (req, res) => {
 };
 
 // Function for single product info
-const singleProduct = async (req, res) => {};
+const singleProduct = async (req, res) => {
+  try {
+    const { productId } = req.body;
+    const product = await productModel.findOne({ _id: productId });
+    res.status(200).json({ success: true, data: product });
+  } catch (error) {
+    debugging(error);
+    return res.status(500).json({ success: false, message: error.message });
+  }
+};
 
 export { addProduct, listProducts, removeProduct, singleProduct };
