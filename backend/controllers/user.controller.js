@@ -95,6 +95,30 @@ const signUpUser = async (req, res) => {
 };
 
 // Route for user admin signIn
-const signInAdmin = async (req, res) => {};
+const signInAdmin = async (req, res) => {
+  try {
+    const { email, password } = req.body;
+
+    if (
+      email === process.env.ADMIN_EMAIL &&
+      password === process.env.ADMIN_PASSWORD
+    ) {
+      const token = createToken(email + password);
+      return res
+        .status(200)
+        .json({ success: true, message: "Logged in successfully.", token });
+    } else {
+      return res
+        .status(400)
+        .json({ success: false, message: "Invalid credentials." });
+    }
+  } catch (error) {
+    debugging(error);
+    return res.status(500).json({
+      success: false,
+      message: error.message,
+    });
+  }
+};
 
 export { signInUser, signUpUser, signInAdmin };
