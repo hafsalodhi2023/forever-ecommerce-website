@@ -28,7 +28,7 @@ app.get("/", (req, res) => {
   res.send("API Working");
 });
 
-// Start the server and listen on specified PORT
+// Start the server and listen on process.env.port PORT
 app.listen(PORT, () => {
   debugging("Server started on PORT: " + PORT);
 });
