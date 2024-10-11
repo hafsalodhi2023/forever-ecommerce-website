@@ -13,7 +13,6 @@ const adminAuth = (req, res, next) => {
       });
     }
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
-    debugging(decoded);
     if (decoded.id !== process.env.ADMIN_EMAIL + process.env.ADMIN_PASSWORD) {
       return res.status(401).json({
         success: false,
