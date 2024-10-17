@@ -17,9 +17,9 @@ const PORT = process.env.PORT || 4000;
 const debugging = debug("development:app");
 
 // Middlewares
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors());
 
 // API Endpoints
 app.use("/api/user", userRouter);
