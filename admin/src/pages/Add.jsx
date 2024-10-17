@@ -46,9 +46,7 @@ function Add() {
         <div>
           <p className="mb-2">Product Category</p>
           <select className="w-full px-3 py-2" name="" id="">
-            <option value="Men" selected>
-              Men
-            </option>
+            <option value="Men">Men</option>
             <option value="Women">Women</option>
             <option value="Kids">Kids</option>
           </select>
@@ -56,9 +54,7 @@ function Add() {
         <div>
           <p className="mb-2">Sub Category</p>
           <select className="w-full px-3 py-2" name="" id="">
-            <option value="Topwear" selected>
-              Topwear
-            </option>
+            <option value="Topwear">Topwear</option>
             <option value="Bottomwear">Bottomwear</option>
             <option value="Winterwear">Winterwear</option>
           </select>
