@@ -9,7 +9,7 @@ const adminAuth = (req, res, next) => {
     if (!token) {
       return res.status(401).json({
         success: false,
-        message: "Not Authorized Login Again.xxx",
+        message: "Not Authorized Login Again.",
       });
     }
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
