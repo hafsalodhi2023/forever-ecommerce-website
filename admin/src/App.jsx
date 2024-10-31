@@ -10,6 +10,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 
 export let backendURL = import.meta.env.VITE_BACKEND_URL;
+export let currency = "PKR. ";
 
 const App = () => {
   const [token, setToken] = useState(
