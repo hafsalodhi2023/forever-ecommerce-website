@@ -44,7 +44,7 @@ function List() {
           return (
             <div key={index}>
               <img
-                src={`data:image/png;base64,${item.images[0].toString(
+                src={`data:image/jpg;base64,${item.images[0].toString(
                   "base64"
                 )}`}
                 alt=""
