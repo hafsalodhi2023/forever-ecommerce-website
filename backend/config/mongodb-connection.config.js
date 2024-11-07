@@ -14,7 +14,7 @@ const debugging = debug("development:config:mongodb-connection");
 const connectDB = async () => {
   try {
     // Attempt to connect to the MongoDB database
-    await mongoose.connect(`${process.env.MONGODB_URI}/forever`);
+    await mongoose.connect(`${process.env.MONGODB_URI}`);
     // Log successful connection
     debugging("Database connection established!");
   } catch (error) {
